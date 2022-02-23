@@ -1,33 +1,22 @@
-//ENTRADAS DEL PROBLEMA
+//controlando etiquetas 
 
+//Crear una variable para guardar una etiqueta 
 
-//ENTRADAS == VARIABLES == CONSTANTES 
+let etiquetaTitulo = document.getElementById("titulo")
+console.log(etiquetaTitulo)
 
-let nombreProducto = "Ghost"
-let precioProducto = 400000
-let pesoProducto= 18.5
-let tieneDescuento = true
-let descripcionProducto = "Vehiculo "
-let telefonoVendendor= "322599231"
+//2. como modificar el texto de una etiqueta
+etiquetaTitulo.textContent = "rojo vos no existis"
 
-const NOMBRE_CLIENTE = "Esteban"
+let etiquetaMenu = document.getElementById("titulonav")
+console.log(etiquetaMenu)
 
+etiquetaMenu.textContent = "Rolls royce"
 
-//ARREGLOS UNIDIMENSIONALES
-//sirven para almacenar varios elementos en una sola variable
+//controlando una foto
 
-let productos= ["Ghost","Phantom","Wraith"]
-let productos2= Array("Ghost","Phantom","Wraith")
-
-
-
-
-
-
-//SALIDAS
-console.log("hablame")  
-console.log(nombreProducto)     
-console.log("su nombre es: "+NOMBRE_CLIENTE+" y su producto es: "+nombreProducto)
-console.log(`su nombre es : ${NOMBRE_CLIENTE} y su producto es ${nombreProducto}`)
-console.log(productos)
-console.log(productos2[2])
+let etiquetaFoto = document.getElementById("fotoroll")
+console.log (etiquetaFoto)
+etiquetaFoto.src = "img/exp1.png"
+//cambiar estilo etiqueta
+etiquetaTitulo.classList.add("text-center")
