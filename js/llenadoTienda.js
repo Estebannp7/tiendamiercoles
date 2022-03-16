@@ -9,8 +9,9 @@ let productos = [
     {foto:'img/cullinan1.jpg', nombre :" Cullinan ",precio: 500000, descripcion :" SUV de lujo"},
     {foto:'img/dawn1.jpg', nombre: "Dawn", precio: 9000000, descripcion: "Vehiculo de lujo descapotable"},
     {foto:'img/spectre1.jpg',nombre: "Spectre", precio: 8000000, descripcion: "Vehiculo de lujo sin diseño"},
-    {foto:'img/extasis1.jpg',nombre: "Espiritu extasis", precio: 200000, descripcion: "Estatuilla de RR"},
-    {foto:'img/mochila.jpg',nombre: "Mochila RR", precio: 400000, descripcion: "Maletin RR"}
+    {foto:'img/sombrillarr.jpg',nombre: "Sombrilla ", precio: 200000, descripcion: "Paraguas exclusivo  de RR"},
+    {foto:'img/mochila.jpg',nombre: "Mochila RR", precio: 400000, descripcion: "Maletin RR"},
+    {foto:'img/champaña.jpg',nombre: "Champaña",precio : 20000, descripcion :"Cofre con chmapaña y copas exclusivo de RR"}
     
 
 ]
@@ -46,16 +47,38 @@ tarjeta.classList.add("h-100")
 
 let foto = document.createElement("img")
 foto.classList.add("card-img-top")
+foto.classList.add("p-4")
 foto.src= producto.foto
 
+let separador = document.createElement("hr")
+separador.classList.add("w-75")
+separador.classList.add("mx-auto")
+separador.classList.add("d-block")
+
+
 //h4 con clase text center
-let titulo = document.createElement("h4")
+let titulo = document.createElement("h5")
 titulo.classList.add("text-center")
+titulo.classList.add("fw-bold")
 titulo.textContent=producto.nombre
 
-let precio = document.createElement("h3")
-precio.classList.add("text-center")
-precio.textContent= producto.precio
+let precio = document.createElement("h6")
+titulo.classList.add("text-center")
+precio.textContent = "$" + producto.precio
+
+let descripcion = document.createElement("h6")
+descripcion.classList.add("text-center")
+descripcion.textContent = producto.descripcion
+
+let botonVerProducto = document.createElement("button")
+botonVerProducto.classList.add("m2")
+botonVerProducto.classList.add("btn")
+botonVerProducto.classList.add("btn-outline-dark")
+botonVerProducto.textContent = "ver producto"
+botonVerProducto.setAttribute("type", "button")
+
+
+
 
 //3 padres e hijos
 tarjeta.appendChild(foto)
@@ -63,4 +86,8 @@ columna.appendChild(tarjeta)
 fila.appendChild(columna)
 tarjeta.appendChild(titulo)
 tarjeta.appendChild(precio)
+tarjeta.appendChild(descripcion)
+tarjeta.appendChild(separador)
+tarjeta.appendChild(botonVerProducto)
+
 })
