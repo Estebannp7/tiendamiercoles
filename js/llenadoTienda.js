@@ -11,7 +11,7 @@ let productos = [
     {foto:'img/spectre1.jpg',nombre: "Spectre", precio: 8000000, descripcion: "Vehiculo de lujo sin diseño"},
     {foto:'img/sombrillarr.jpg',nombre: "Sombrilla ", precio: 200000, descripcion: "Paraguas exclusivo  de RR"},
     {foto:'img/mochila.jpg',nombre: "Mochila RR", precio: 400000, descripcion: "Maletin RR"},
-    {foto:'img/champaña.jpg',nombre: "Champaña",precio : 20000, descripcion :"Cofre con chmapaña y copas exclusivo de RR"}
+    {foto:'img/champaña.jpg',nombre: "Champaña",precio : 20000, descripcion :"Cofre con champaña y copas exclusivo de RR"}
     
 
 ]
