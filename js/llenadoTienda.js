@@ -8,7 +8,7 @@ let productos = [
     {foto:'img/Phantom1.jpg', nombre: " Phantom", precio: 300000, descripcion: "Vehiculo de lujo sedan"},
     {foto:'img/cullinan1.jpg', nombre :" Cullinan ",precio: 500000, descripcion :" SUV de lujo"},
     {foto:'img/dawn1.jpg', nombre: "Dawn", precio: 9000000, descripcion: "Vehiculo de lujo descapotable"},
-    {foto:'img/spectre1.jpg',nombre: "Spectre", precio: 8000000, descripcion: "Vehiculo de lujo sin diseño"},
+    {foto:'img/spectre1.jpg',nombre: "Spectre", precio: 8000000, descripcion: "Vehiculo de lujo electrico"},
     {foto:'img/sombrillarr.jpg',nombre: "Sombrilla ", precio: 200000, descripcion: "Paraguas exclusivo  de RR"},
     {foto:'img/mochila.jpg',nombre: "Mochila RR", precio: 400000, descripcion: "Maletin RR"},
     {foto:'img/champaña.jpg',nombre: "Champaña",precio : 20000, descripcion :"Cofre con champaña y copas exclusivo de RR"}
