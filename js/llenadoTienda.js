@@ -16,7 +16,6 @@ let productos = [
 
 ]
 
-console.log(productos)
 
 //COMO RECORRER UN ARREGLO CON JS
 //1.Creo una variable para almacenar la vase sobre la cual voy a pintar
@@ -26,8 +25,7 @@ let fila= document.getElementById("fila")
 
 productos.forEach(function(producto){
 
-    console.log(producto.nombre)
-    console.log(producto.precio)
+    
 
 
 
@@ -82,12 +80,35 @@ botonVerProducto.setAttribute("type", "button")
 
 //3 padres e hijos
 tarjeta.appendChild(foto)
-columna.appendChild(tarjeta)
-fila.appendChild(columna)
 tarjeta.appendChild(titulo)
 tarjeta.appendChild(precio)
 tarjeta.appendChild(descripcion)
 tarjeta.appendChild(separador)
 tarjeta.appendChild(botonVerProducto)
+
+columna.appendChild(tarjeta)
+fila.appendChild(columna)
+
+})
+
+//rutina para ampliar infromacion del product
+let filaContenedora=document.getElementById("fila")
+filaContenedora.addEventListener("click",function(evento){
+
+if(evento.target.classList.contains("btn")){
+
+console.log(evento.target.parentElement.querySelector("h5").textContent)
+console.log(evento.target.parentElement.querySelector("img").src)
+
+let modalInfo = new bootstrap.Modal(document.getElementById('modalinfo'))
+modalInfo.show()
+
+
+let fotoInfo = document.getElementById()
+
+
+
+}
+ 
 
 })
