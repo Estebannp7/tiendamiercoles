@@ -44,6 +44,10 @@ let cantidad = document.getElementById("cantidadProducto").value
 producto.cantidad=cantidad
 
 
+let precio=(producto.precio.split("$")[1].split("COP")[0])
+console.log(precio)
+producto.subtotal=cantidad*Number(precio)
+
 
     carrito.push(producto)
 
@@ -84,35 +88,83 @@ let base = document.getElementById("baseCarro")
 base.innerHTML= ""
 
 
-carrito.forEach(function(producto){})
-
-let fila = document.createElement("div")
- fila.classList.add("row")
+carrito.forEach(function(producto){
 
 
-let columna1 = document.createElement("div")
-columna1.classList.add("col-4")
+    let fila=document.createElement("div")
+    fila.classList.add("row")
+
+    let columna1=document.createElement("div")
+    columna1.classList.add("col-4")
+
+    let columna2=document.createElement("div")
+    columna2.classList.add("col-8")
+   
+    
+    let precio=document.createElement("p")
+    precio.classList.add("text-warning")
+    precio.textContent=producto.precio
+
+    
+
+    let foto = document.createElement("img")
+    foto.classList.add("w-100","img-fluid")
+    foto.src=producto.foto
+
+    let nombre=document.createElement("p")
+    nombre.classList.add("text-dark")
+    nombre.textContent=producto.titulo
+
+    let subt=document.createElement("p")
+    subt.classList.add("text-dark")
+    
+    
+    subt.textContent="Subtotal : "+producto.subtotal
+    
+    let fila2=document.createElement("div")
+    fila2.classList.add("row")
+
+    
+
+    
+
+    let total=document.createElement("p")
+    total.classList.add("text-dark")
 
 
-let columna2 = document.createElement("div")
-columna2.classList.add("col-8")
+    let cant=document.createElement("p")
+    cant.classList.add("text-dark")
+    cant.textContent="cantidad : "+producto.cantidad
+
+    
+    
+
+    
+
+    //padres e hijos
+
+    columna1.appendChild(foto)
+    columna2.appendChild(nombre)
+    columna2.appendChild(precio)
+    columna2.appendChild(cant)
+    columna2.appendChild(subt)
+    
+    
+    fila.appendChild(columna1)
+    fila.appendChild(columna2)
+
+    
+    
+    
+
+    base.appendChild(fila)
+})
 
 
-let foto = document.createElement("img")
-foto.classList.add("w-100 ","img-fluid")
-foto.src =producto.foto
 
 
-
-//Childs
-
-columna1.appendChild(foto)
-fila.appendChild(columna1)
-fila.appendChild(columna2)
-base.appendChild(fila)
 
 
 modalCompra.show()
 
- })
- 
+})

@@ -4,7 +4,7 @@
        
         {foto:'img/ghost1.jpg', nombre: "Ghost", precio: 200000,descripcion:"Carro de lujo"},
         { foto:'img/wraith1.jpg', nombre: "Wraith", precio: 600000,descripcion:"Carro lujosisimo"},
-        {foto:'img/Phantom1.jpg', nombre: " Phantom", precio: 300000, descripcion: "Vehiculo de lujo sedan"},
+        {foto:'img/Phantom1.png', nombre: " Phantom", precio: 300000, descripcion: "Vehiculo de lujo sedan"},
         {foto:'img/cullinan1.jpg', nombre :" Cullinan ",precio: 500000, descripcion :" SUV de lujo"},
         {foto:'img/dawn1.jpg', nombre: "Dawn", precio: 9000000, descripcion: "Vehiculo de lujo descapotable"},
         {foto:'img/spectre1.jpg',nombre: "Spectre", precio: 8000000, descripcion: "Vehiculo de lujo electrico"},
