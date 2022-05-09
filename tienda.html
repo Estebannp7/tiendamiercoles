@@ -80,7 +80,8 @@
                 <h5  id="descripcionInfo"></h5>
                 <div class="mb-3">
                   <label class="form-label">Cantidad:</label>
-                  <input type="number" class="form-control" id="cantidadProducto" >
+                  <input type="number" class="form-control" id="cantidadProducto" min="1" max="10" value="1"
+                      aria-valuenow="1">
                 </div>
                 </div>
               </div>
@@ -88,7 +89,7 @@
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
               <button type="button" class="btn btn-primary "id="botonadd">Añadir al carrito</button>
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="limpiar">Limpiar carrito</button>
+             
               
             </div>
           </div>
@@ -108,13 +109,19 @@
       </div>
       <div class="modal-body">
      <div class="container" id="baseCarro">
+    </div>
+    <p id="totalp"></p>
+    <button type="button" class="btn btn-success" id="usd">Precio en USD</button>
+   
+  </div>
+  <div class="modal-footer">
 
-     </div>
+    <button type="button" class="btn btn-danger" id="limpiar">Limpiar el carrito</button>
+    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+    <button type="button" class="btn btn-primary">Comprar</button>
+  </div>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-primary">Comprar</button>
-      </div>
+    
     </div>
   </div>
 </div>

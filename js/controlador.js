@@ -72,6 +72,7 @@ capsula.classList.remove("invisible")
 carrito =[]
 let capsula = document.getElementById("capsula")
 capsula.classList.add("invisible")
+modalCompra.hide()
 
  })
  //rutina para ver el carrito
@@ -126,17 +127,40 @@ carrito.forEach(function(producto){
 
     
 
-    
-
-    let total=document.createElement("p")
-    total.classList.add("text-dark")
-
-
     let cant=document.createElement("p")
-    cant.classList.add("text-dark")
+    cant.classList.add("p")
     cant.textContent="cantidad : "+producto.cantidad
-
     
+    let total = document.getElementById("totalp")
+    total.classList.add("text-warning")
+    let resultado = Number(producto.cantidad) * Number(producto.precio)
+    total.textContent = resultado;
+
+
+
+   producto.subtotal = resultado
+
+
+        let totalneto = 0;
+
+        carrito.forEach(function (producto) {
+            totalneto = totalneto + Number(producto.subtotal)
+            total.textContent = "Total : $" + totalneto + " COP"
+        })
+        let dolares = document.getElementById("usd")
+        dolares.addEventListener("click", function () {
+            let usd = 1 * totalneto / Number(4000)
+
+            total.textContent = "Total : $" + usd + " USD"
+            let preciousd = producto.precio / Number(4000)
+          
+
+
+        })
+        
+
+
+
     
 
     
@@ -148,8 +172,8 @@ carrito.forEach(function(producto){
     columna2.appendChild(precio)
     columna2.appendChild(cant)
     columna2.appendChild(subt)
-    
-    
+
+
     fila.appendChild(columna1)
     fila.appendChild(columna2)
 
